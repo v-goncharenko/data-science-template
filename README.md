@@ -46,7 +46,7 @@ Now you are ready to add dependencies to your project. For this use [`add` comma
 
 Next run `poetry install` to check your final state are even with configs.
 
-After that commit changes to git and commit them `git add pyproject.toml poetry.lock`
+After that add changes to git and commit them `git add pyproject.toml poetry.lock`
 
 Finally add `pre-commit` hooks to git: `pre-commit install`
 
