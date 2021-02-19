@@ -4,7 +4,9 @@ This repo aims to give a robust starting point to any Data Science related proje
 
 It contains readymade tools setup to start adding dependencies and coding.
 
-## What to change
+To get yourself familiar with tools used here watch [my talk on Data Science project setup (in Russian)](https://youtu.be/jLIAiDMyseQ)
+
+## What to change?
 
 * project name (default: `ds_project`)
     * in `pyproject.toml` - tool.poetry.name
@@ -15,3 +17,37 @@ It contains readymade tools setup to start adding dependencies and coding.
         * black
         * isort
     * in `setup.cfg` for `flake8`
+
+## How to setup an environment?
+
+This template use `poetry` to manage dependencies of your project. They 
+
+First you need to [install poetry](https://python-poetry.org/docs/#installation).
+
+Then if you use `conda` (recommended) to manage environments (to use regular virtualenvenv just skip this step):
+
+* tell `poetry` not to create new virtualenv for you
+
+    (instead `poetry` will use currently activated virtualenv):
+
+    `poetry config virtualenvs.create false`
+
+* create new `conda` environment for your project (change env name for your desired one):
+
+    `conda create -n ds_project python=3.9`
+
+* actiave environment:
+
+    `conda activate ds_project`
+
+Now you are ready to add dependencies to your project. For this use [`add` command](https://python-poetry.org/docs/cli/#add):
+
+`poetry add scikit-learn torch <any_package_you_need>`
+
+Next run `poetry install` to check your final state are even with configs.
+
+After that commit changes to git and commit them `git add pyproject.toml poetry.lock`
+
+Finally add `pre-commit` hooks to git: `pre-commit install`
+
+At this step you are ready to write clean reproducible code!
