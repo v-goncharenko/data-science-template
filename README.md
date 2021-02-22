@@ -6,6 +6,8 @@ It contains readymade tools setup to start adding dependencies and coding.
 
 To get yourself familiar with tools used here watch [my talk on Data Science project setup (in Russian)](https://youtu.be/jLIAiDMyseQ)
 
+**If you use this repo as a template - leave a star please** because template usages don't count in Forks.
+
 ## What to change?
 
 * project name (default: `ds_project`)
