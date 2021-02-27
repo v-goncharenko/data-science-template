@@ -19,6 +19,7 @@ To get yourself familiar with tools used here watch [my talk on Data Science pro
         * black
         * isort
     * in `setup.cfg` for `flake8`
+    * in `.pre-commit-config.yaml` for `prettier`
 
 ## How to setup an environment?
 
