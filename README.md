@@ -10,6 +10,12 @@ To get yourself familiar with tools used here watch
 **If you use this repo as a template - leave a star please** because template usages don't
 count in Forks.
 
+## Workflow
+
+Experiments and technology discovery are usualy performed on Jupyter Notebooks. For them `notebooks` directory is reserved. More info on working with Notebooks could be found in `notebooks/README.md`.
+
+More mature part of pipeline (functions, classes, etc) are stored in `.py` files in main package directory (by default `ds_project`).
+
 ## What to change?
 
 - project name (default: `ds_project`)
