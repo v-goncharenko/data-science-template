@@ -5,7 +5,7 @@ description = "Template repository to start your Data Science project from"
 authors = ["Vladilav Goncharenko <vladislav.goncharenko@phystech.edu>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -14,7 +14,7 @@ dvc = "^1.11.16"
 
 [tool.black]
 line-length = 90
-target-version = ["py39"]
+target-version = ["py38"]
 skip-string-normalization = true
 
 [tool.isort]
