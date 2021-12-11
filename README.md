@@ -1,20 +1,24 @@
 # Template for Data Science Project
 
-This repo aims to give a robust starting point to any Data Science related project.
+This repo aims to give a robust starting point to any Data Science related
+project.
 
 It contains readymade tools setup to start adding dependencies and coding.
 
 To get yourself familiar with tools used here watch
 [my talk on Data Science project setup (in Russian)](https://youtu.be/jLIAiDMyseQ)
 
-**If you use this repo as a template - leave a star please** because template usages don't
-count in Forks.
+**If you use this repo as a template - leave a star please** because template
+usages don't count in Forks.
 
 ## Workflow
 
-Experiments and technology discovery are usualy performed on Jupyter Notebooks. For them `notebooks` directory is reserved. More info on working with Notebooks could be found in `notebooks/README.md`.
+Experiments and technology discovery are usualy performed on Jupyter Notebooks.
+For them `notebooks` directory is reserved. More info on working with Notebooks
+could be found in `notebooks/README.md`.
 
-More mature part of pipeline (functions, classes, etc) are stored in `.py` files in main package directory (by default `ds_project`).
+More mature part of pipeline (functions, classes, etc) are stored in `.py` files
+in main package directory (by default `ds_project`).
 
 ## What to change?
 
@@ -33,10 +37,11 @@ More mature part of pipeline (functions, classes, etc) are stored in `.py` files
 
 This template use `poetry` to manage dependencies of your project. They
 
-First you need to [install poetry](https://python-poetry.org/docs/#installation).
+First you need to
+[install poetry](https://python-poetry.org/docs/#installation).
 
-Then if you use `conda` (recommended) to manage environments (to use regular virtualenvenv
-just skip this step):
+Then if you use `conda` (recommended) to manage environments (to use regular
+virtualenvenv just skip this step):
 
 - tell `poetry` not to create new virtualenv for you
 
@@ -44,9 +49,10 @@ just skip this step):
 
   `poetry config virtualenvs.create false`
 
-- create new `conda` environment for your project (change env name for your desired one):
+- create new `conda` environment for your project (change env name for your
+  desired one):
 
-  `conda create -n ds_project python=3.8`
+  `conda create -n ds_project python=3.9`
 
 - actiave environment:
 
@@ -59,7 +65,8 @@ Now you are ready to add dependencies to your project. For this use
 
 Next run `poetry install` to check your final state are even with configs.
 
-After that add changes to git and commit them `git add pyproject.toml poetry.lock`
+After that add changes to git and commit them
+`git add pyproject.toml poetry.lock`
 
 Finally add `pre-commit` hooks to git: `pre-commit install`
 
