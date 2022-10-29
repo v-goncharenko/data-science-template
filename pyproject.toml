@@ -7,7 +7,7 @@ maintainers = ["Vladislav Goncharenko <vladislav.goncharenko@phystech.edu>"]
 readme = "README.md"
 repository = "https://github.com/v-goncharenko/data-science-template"
 documentation = "TBD"
-keywords = ["reproducibility", "data science", "template"]
+keywords = ["reproducibility", "data science", "machine learning", "template"]
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
