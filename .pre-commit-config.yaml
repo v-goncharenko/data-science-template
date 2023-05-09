@@ -46,3 +46,25 @@ repos:
         types_or: [markdown, yaml, toml, json, dockerfile, shell]
         additional_dependencies: ["prettier@2.6.2", "prettier-plugin-sh@0.10.2"]
         args: [--print-width=80, --prose-wrap=always]
+# more to come (from https://dev.funkwhale.audio/funkwhale/funkwhale/-/blob/develop/.pre-commit-config.yaml)
+# - repo: https://github.com/python-poetry/poetry
+#   rev: 1.4.2
+#   hooks:
+#     - id: poetry-check
+#       files: ^api/pyproject.toml$
+#       args: [--directory=api]
+
+#     - id: poetry-lock
+#       files: ^api/pyproject.toml$
+#       args: [--directory=api, --check]
+
+# - repo: https://github.com/codespell-project/codespell
+#   rev: v2.2.2
+#   hooks:
+#     - id: codespell
+#       additional_dependencies: [tomli]
+
+# - repo: https://github.com/shellcheck-py/shellcheck-py
+#   rev: v0.8.0.4
+#   hooks:
+#     - id: shellcheck
