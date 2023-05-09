@@ -71,3 +71,7 @@ After that add changes to git and commit them
 Finally add `pre-commit` hooks to git: `pre-commit install`
 
 At this step you are ready to write clean reproducible code!
+
+## More tools
+
+- Changelog generation: https://towncrier.readthedocs.io/en/stable/
