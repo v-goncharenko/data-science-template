@@ -1,5 +1,5 @@
 default_language_version:
-  python: python3.9
+  python: python3.11
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -46,6 +46,7 @@ repos:
         types_or: [markdown, yaml, toml, json, dockerfile, shell]
         additional_dependencies: ["prettier@3.1.0", "prettier-plugin-sh@0.13.1"]
         args: [--print-width=80, --prose-wrap=always]
+#
 # more to come (from https://dev.funkwhale.audio/funkwhale/funkwhale/-/blob/develop/.pre-commit-config.yaml)
 # - repo: https://github.com/python-poetry/poetry
 #   rev: 1.4.2

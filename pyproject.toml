@@ -1,25 +1,25 @@
 [tool.poetry]
-name = "ds_project"
+name = "ds-project"
 version = "0.1.0"
-description = "Template repository to start your Data Science project from"
+description = "Template repository to start your Data Science or Machine Learning project from"
 authors = ["Vladilav Goncharenko <vladislav.goncharenko@phystech.edu>"]
 maintainers = ["Vladislav Goncharenko <vladislav.goncharenko@phystech.edu>"]
 readme = "README.md"
 repository = "https://github.com/v-goncharenko/data-science-template"
-documentation = "TBD"
+documentation = "https://girafe.ai/"
 keywords = ["reproducibility", "data science", "machine learning", "template"]
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
-python = "~3.9"
+python = "~3.11"
 
-[tool.poetry.dev-dependencies]
-pre-commit = "^2.16.0"
-pytest = "^6.2.5"
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.0"
+pytest = "^7.4.4"
 
 [tool.black]
 line-length = 90
-target-version = ["py39"]
+target-version = ["py311"]
 
 [tool.isort]
 src_paths = ["ds_project"]
@@ -27,10 +27,23 @@ profile = "black"
 line_length = 90
 lines_after_imports = 2
 
+[tool.flake8]
+max-line-length = 90
+ignore = ['E203', 'E501', 'W503', 'B950']
+max-complexity = 12
+select = ['B', 'C', 'E', 'F', 'W', 'B9']
+per-file-ignores = [
+    # for easier imports to __init__ without __all__
+    '**/__init__.py: F401',
+    # file to define custom types
+    'types.py: F401',
+]
+count = true
+
 [tool.nbqa.config]
 black = "pyproject.toml"
 isort = "pyproject.toml"
-flake8 = "setup.cfg"
+flake8 = "pyproject.toml"
 
 [tool.nbqa.addopts]
 flake8 = ["--extend-ignore=E402"]
@@ -40,5 +53,5 @@ black = 1
 isort = 1
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
